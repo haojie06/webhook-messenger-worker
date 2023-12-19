@@ -47,8 +47,9 @@ async fn main(mut req: Request, env: Env, _ctx: Context) -> Result<Response> {
                     .with_headers(headers)
                     .with_body(Some(JsValue::from_str(&relay_req.payload.to_string()))),
             )?;
-            let resp = Fetch::Request(request).send().await?;
-            Response::ok(format!("response: {}", resp.status_code()))
+            let mut resp = Fetch::Request(request).send().await?;
+            let resp_text = resp.text().await?;
+            Response::ok(format!("{}: {}", resp.status_code(), resp_text))
         }
         _ => Response::error("Method not allowed", 405),
     }

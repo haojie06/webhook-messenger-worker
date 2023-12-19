@@ -1,12 +1,24 @@
 # Template: worker-rust
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/worker-rust)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/haojie06/webhook-messenger-worker)
 
-A template for kick starting a Cloudflare worker project using [`workers-rs`](https://github.com/cloudflare/workers-rs).
+relay your webhook request to an endpoint through cloudflare worker.
 
-This template is designed for compiling Rust to WebAssembly and publishing the resulting worker to Cloudflare's [edge infrastructure](https://www.cloudflare.com/network/).
+```JSON
+{
+    "endpoint": "https://httpbin.org/anything",
+    "secret": "a secret",
+    "payload": {
+        "say": "hello"
+    }
+}
+```
 
-## Setup
+<!-- A template for kick starting a Cloudflare worker project using [`workers-rs`](https://github.com/cloudflare/workers-rs).
+
+This template is designed for compiling Rust to WebAssembly and publishing the resulting worker to Cloudflare's [edge infrastructure](https://www.cloudflare.com/network/). -->
+
+<!-- ## Setup
 
 To create a `my-project` directory using this template, run:
 
@@ -16,9 +28,9 @@ $ npx wrangler generate my-project https://github.com/cloudflare/workers-sdk/tem
 $ yarn wrangler generate my-project https://github.com/cloudflare/workers-sdk/templates/experimental/worker-rust
 # or
 $ pnpm wrangler generate my-project https://github.com/cloudflare/workers-sdk/templates/experimental/worker-rust
-```
+``` -->
 
-## Wrangler
+<!-- ## Wrangler
 
 Wrangler is used to develop, deploy, and configure your Worker via CLI.
 
@@ -83,4 +95,4 @@ Read more about this on the [`workers-rs`](https://github.com/cloudflare/workers
 
 ## Issues
 
-If you have any problems with the `worker` crate, please open an issue on the upstream project issue tracker on the [`workers-rs` repository](https://github.com/cloudflare/workers-rs).
+If you have any problems with the `worker` crate, please open an issue on the upstream project issue tracker on the [`workers-rs` repository](https://github.com/cloudflare/workers-rs). -->
