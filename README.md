@@ -5,6 +5,7 @@
 relay your webhook request to an endpoint through cloudflare worker.
 
 ```JSON
+Header: API-Key: JTSz8tNCyALE5syr
 {
     "endpoint": "https://httpbin.org/anything",
     "secret": "a secret",
@@ -13,6 +14,8 @@ relay your webhook request to an endpoint through cloudflare worker.
     }
 }
 ```
+
+you can change your API-Key in `wrangler.toml` file or in the cloudflare worker dashboard(settings).
 
 <!-- A template for kick starting a Cloudflare worker project using [`workers-rs`](https://github.com/cloudflare/workers-rs).
 
